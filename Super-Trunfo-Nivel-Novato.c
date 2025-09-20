@@ -9,14 +9,16 @@
         int pontostur, pontosturc2; //número de pontos turísticos disponíveis na cidade
         float area, areac2; //a área da cidade em Km²
         float pib, pibc2; //produto interno bruto (PIB) da cidade
+        float densidade, densidadec2; // densidade populacional
+        float pibpc, pibpc2; // pib per capta
 
 
-        printf("\nSUPER TRUNFO\n");
+        printf("\n=== SUPER TRUNFO ===\n");
 
 
         // CARTA 1
 
-        printf("CARTA 1\n");
+        printf("- CARTA 1 -\n");
         printf("Digite o estado (Escolha uma letra entre 'A' e 'H'): \n");
         scanf("%1s", estado);
 
@@ -38,10 +40,13 @@
         printf("Digite o número de pontos turísticos na cidade: \n");
         scanf("%d", &pontostur);
 
+        densidade = (float)populacao / area;
+        pibpc = (float)pib / populacao;
+
 
         // CARTA 2
 
-        printf("\nCARTA 2\n");
+        printf("\n- CARTA 2 -\n");
         printf("Digite o estado (Escolha uma letra entre 'A' e 'H'): \n");
         scanf("%1s", estadoc2);
 
@@ -63,6 +68,8 @@
         printf("Digite o número de pontos turísticos na cidade: \n");
         scanf("%d", &pontosturc2);
 
+        densidadec2 = (float)populacaoc2 / areac2;
+        pibpc2 = (float)pibc2 / populacaoc2;
 
         //RESULTADOS
 
@@ -74,6 +81,8 @@
         printf("Área: %.0f Km²\n", area);
         printf("PIB: R$%.0f\n", pib);
         printf("Pontos Turísticos: %d\n", pontostur);
+        printf("Densidade populacional: %.2f Hab/Km²\n", densidade);
+        printf("PIB Per Capta: R$%.2f\n", pibpc);
 
 
         printf("\nCARTA 2\n");
@@ -84,6 +93,8 @@
         printf("Área: %.0f Km²\n", areac2);
         printf("PIB: R$%.0f\n", pibc2);
         printf("Pontos Turísticos: %d\n", pontosturc2);
+        printf("Densidade Populacional: %.2f Hab/Km²\n", densidadec2);
+        printf("PIB Per Capta: R$%.2f\n", pibpc2);
 
 
         return 0;
